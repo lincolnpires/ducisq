@@ -1,0 +1,9 @@
+*                 text=auto
+
+*.bsdesign        binary
+*.html            text diff=html
+package-lock.json text -diff
+*.cs              text diff=csharp
+*.svg             text
+*.png             binary
+*.jpg             binary
