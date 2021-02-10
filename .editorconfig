@@ -6,13 +6,17 @@ indent_style = space
 indent_size = 2
 end_of_line = lf
 charset = utf-8
-
 trim_trailing_whitespace = true
 insert_final_newline = true
 max_line_length = 80
+ij_any_wrap_long_lines = true
 
 [*.md]
 trim_trailing_whitespace = false
 
-[*.cs]
+[*.{cs,csproj}]
 indent_size = 4
+max_line_length = 100
+
+[*.sln]
+max_line_length = 140
