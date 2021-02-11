@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="All" type="CompoundRunConfigurationType">
+    <toRun name="client only" type="js.build_tools.npm" />
+    <toRun name="DucisQ" type="LaunchSettings" />
+    <method v="2" />
+  </configuration>
+</component>
