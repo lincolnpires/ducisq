@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { Container } from 'reactstrap';
 import NavMenu from './NavMenu';
@@ -6,7 +5,7 @@ import NavMenu from './NavMenu';
 function Layout(props) {
   const { children } = props;
   return (
-    <div>
+    <div className="wrapper">
       <NavMenu />
       <Container>
         {children}

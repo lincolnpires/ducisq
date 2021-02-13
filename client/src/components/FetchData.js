@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 class FetchData extends Component {
   constructor(props) {
     super(props);
-    this.state = { forecasts: [], loading: true };
+    this.state = {
+      forecasts: [],
+      loading: true,
+    };
   }
 
   componentDidMount() {
@@ -12,7 +15,7 @@ class FetchData extends Component {
 
   static renderForecastsTable(forecasts) {
     return (
-      <table className="table table-striped" aria-labelledby="tabelLabel">
+      <table className="table table-striped" aria-labelledby="tableLabel">
         <thead>
           <tr>
             <th>Date</th>
@@ -38,18 +41,24 @@ class FetchData extends Component {
   async populateWeatherData() {
     const response = await fetch('weatherforecast');
     const data = await response.json();
-    this.setState({ forecasts: data, loading: false });
+    this.setState({
+      forecasts: data,
+      loading: false,
+    });
   }
 
   render() {
-    const { loading, forecasts } = this.state;
+    const {
+      loading,
+      forecasts,
+    } = this.state;
     const contents = loading
       ? <p><em>Loading...</em></p>
       : FetchData.renderForecastsTable(forecasts);
 
     return (
       <div>
-        <h1 id="tabelLabel">Weather forecast</h1>
+        <h1 id="tableLabel">Weather forecast</h1>
         <p>This component demonstrates fetching data from the server.</p>
         {contents}
       </div>
