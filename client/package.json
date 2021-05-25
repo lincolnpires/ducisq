@@ -45,7 +45,7 @@
     ]
   },
   "dependencies": {
-    "ajv": "^7.0.4",
+    "ajv": "^7.2.4",
     "bootstrap": "^4.6.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.19.0",
